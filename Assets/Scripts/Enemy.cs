@@ -6,21 +6,23 @@ using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
-	[SerializeField] private float speed = 5f;
+	[SerializeField] private float speed;
 	private float health = 50f;
 	//private int score = 50;
 	private bool isDead = false;
 
 	private Transform target;
-	[SerializeField] private float randomFactor = 0.3f;
-	//[SerializeField] private Vector3 targetPos;
+	[SerializeField] private float movementRandomFactor = 0.3f;
 	[SerializeField] private Vector3 randomOffset;
 	[SerializeField] private int waypointIndex = 0;
+	WaveConfig waveConfig;
 
-    void Start()
+	void Start()
     {
+		speed = waveConfig.GetEnemySpeed() * waveConfig.GetSpeedRandomFactor();
 		target = Waypoints.waypoints[waypointIndex];
-		randomOffset = new Vector3(Random.Range(-randomFactor, randomFactor), Random.Range(-randomFactor, randomFactor), 0);
+		randomOffset = new Vector3(Random.Range(-movementRandomFactor, movementRandomFactor),
+									Random.Range(-movementRandomFactor, movementRandomFactor), 0);
     }
 
     void Update()
@@ -28,7 +30,12 @@ public class Enemy : MonoBehaviour
 		Move();
 	}
 
-    private void Move()
+	public void SetWaveConfig(WaveConfig waveConfig)
+	{
+		this.waveConfig = waveConfig;
+	}
+
+	private void Move()
     {
         if(waypointIndex < Waypoints.waypoints.Length)
         {
@@ -41,7 +48,8 @@ public class Enemy : MonoBehaviour
 			if (transform.position == target.position + randomOffset)
             {
 				waypointIndex++;
-				randomOffset = new Vector3(Random.Range(-randomFactor, randomFactor), Random.Range(-randomFactor, randomFactor), 0);
+				randomOffset = new Vector3(Random.Range(-movementRandomFactor, movementRandomFactor),
+											Random.Range(-movementRandomFactor, movementRandomFactor), 0);
 			}
 		}
 		else

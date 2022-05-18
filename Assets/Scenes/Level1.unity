@@ -330,7 +330,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 157950804271460600, guid: 29919c23687084041869855c08437252, type: 3}
       propertyPath: speed
-      value: 10.27
+      value: 3.19
       objectReference: {fileID: 0}
     - target: {fileID: 157950804271460600, guid: 29919c23687084041869855c08437252, type: 3}
       propertyPath: randomFactor
@@ -342,7 +342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1636465152379611223, guid: 29919c23687084041869855c08437252, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3497905971042221668, guid: 29919c23687084041869855c08437252, type: 3}
       propertyPath: m_SortingOrder
@@ -1624,7 +1624,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 157950804271460600, guid: 29919c23687084041869855c08437252, type: 3}
       propertyPath: speed
-      value: 10.27
+      value: 6.49
       objectReference: {fileID: 0}
     - target: {fileID: 157950804271460600, guid: 29919c23687084041869855c08437252, type: 3}
       propertyPath: randomFactor
@@ -1636,7 +1636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1636465152379611223, guid: 29919c23687084041869855c08437252, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3497905971042221668, guid: 29919c23687084041869855c08437252, type: 3}
       propertyPath: m_SortingOrder
@@ -6076,6 +6076,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8508691905769537091, guid: 3a2a8ffe42674e84881cba96ae1c059f, type: 3}
   m_PrefabInstance: {fileID: 945669950}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &955614695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 955614697}
+  - component: {fileID: 955614696}
+  m_Layer: 0
+  m_Name: GameMaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &955614696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955614695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfe47be927abbe409f99821b69a0069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveConfigs:
+  - {fileID: 11400000, guid: 643f086a0bea7a14191b43ff9cadcd40, type: 2}
+  - {fileID: 11400000, guid: c02a0a191374bf744b0db4bf88531c9c, type: 2}
+  startingWave: 0
+  looping: 0
+--- !u!4 &955614697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955614695}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &957868361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10185,7 +10233,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 157950804271460600, guid: 29919c23687084041869855c08437252, type: 3}
       propertyPath: speed
-      value: 10.27
+      value: 8.83
       objectReference: {fileID: 0}
     - target: {fileID: 157950804271460600, guid: 29919c23687084041869855c08437252, type: 3}
       propertyPath: randomFactor
@@ -10197,7 +10245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1636465152379611223, guid: 29919c23687084041869855c08437252, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3497905971042221668, guid: 29919c23687084041869855c08437252, type: 3}
       propertyPath: m_SortingOrder
@@ -13864,7 +13912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1636465152379611223, guid: 29919c23687084041869855c08437252, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3497905971042221668, guid: 29919c23687084041869855c08437252, type: 3}
       propertyPath: m_SortingOrder
