@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 157950804271460600}
   m_Layer: 0
   m_Name: Enemy 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636465152379611223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.54, y: 3.48, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.32757, y: 0.32757, z: 0.32757}
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,6 +97,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  randomFactor: 0.3
+  movementRandomFactor: 0.3
   randomOffset: {x: 0, y: 0, z: 0}
   waypointIndex: 0

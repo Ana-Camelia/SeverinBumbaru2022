@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
@@ -8,17 +9,23 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] int startingWave = 0;
     //[SerializeField] bool looping = false;
     private float countdown = 5f;
-    private float timeBetweenWaves = 30f;
+    private float timeBetweenWaves = 5f;
+    [SerializeField] public TextMeshProUGUI countdownText;
     bool coroutineRunning = false;
 
     void Update()
     {
-        countdown -= Time.deltaTime;
         if (coroutineRunning) return;
         if (countdown <= 0f)
         {
             StartCoroutine(SpawnAllWaves());
             coroutineRunning = true;
+            countdownText.text = "0";
+        }
+        else
+        {
+            countdown -= Time.deltaTime;
+            countdownText.text = Mathf.Ceil(countdown).ToString();
         }
     }
 
