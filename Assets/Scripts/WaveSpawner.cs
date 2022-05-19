@@ -8,10 +8,11 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] List<WaveConfig> waveConfigs;
     [SerializeField] int startingWave = 0;
     //[SerializeField] bool looping = false;
-    private float countdown = 5f;
+    public float countdown = 5f;
     private float timeBetweenWaves = 5f;
     [SerializeField] public TextMeshProUGUI countdownText;
     bool coroutineRunning = false;
+    [HideInInspector] public bool spawnDone = false;
 
     void Update()
     {
@@ -37,6 +38,7 @@ public class WaveSpawner : MonoBehaviour
             StartCoroutine(SpawnAllEnemiesInWave(currentWave)); 
             yield return new WaitForSeconds(timeBetweenWaves);
         }
+        spawnDone = true;
     }
 
     IEnumerator SpawnAllEnemiesInWave(WaveConfig waveConfig)

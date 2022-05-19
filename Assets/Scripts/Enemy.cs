@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
         {
 			//Debug.Log("Finish");
 			Die();
-			LevelManager.isGameOver = true;
+			FindObjectOfType<LevelManager>().isGameOver = true;
 		}
     }
 
