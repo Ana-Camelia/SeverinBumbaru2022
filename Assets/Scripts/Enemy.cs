@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 public class Enemy : MonoBehaviour
 {
 	[SerializeField] private float speed;
-	private float health = 50f;
+	[SerializeField] private float health = 50f;
 	//private int score = 50;
 	private bool isDead = false;
 

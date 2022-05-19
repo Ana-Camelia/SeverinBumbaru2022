@@ -5,25 +5,27 @@ using UnityEngine;
 public class TileScript : MonoBehaviour
 {
 	public Color hoverColor;
-	public Color startColor;
+	private Color startColor;
+	public Color notEnoughMoneyColor;
 	private SpriteRenderer rend;
 
 	[HideInInspector]
 	public GameObject turret;
-
+	BuildManager buildManager;
 	void Start()
 	{
 		rend = GetComponent<SpriteRenderer>();
 		startColor = rend.material.color;
-		Debug.Log(startColor.ToString());
-
-		Debug.Log(hoverColor.ToString());
-		//buildManager = BuildManager.instance;
+		buildManager = BuildManager.instance;
 	}
 
 	void OnMouseEnter()
 	{
-		rend.material.color = hoverColor;
+		if (buildManager.GetTurretToBuild() == null) return;
+
+		rend.material.color = buildManager.HasMoney ?
+								hoverColor :
+								notEnoughMoneyColor;
 	}
 
 	void OnMouseExit()
@@ -33,12 +35,16 @@ public class TileScript : MonoBehaviour
 
 	void OnMouseDown()
 	{
-		if (turret != null)
-		{
-			//buildManager.SelectNode(this);
+		if (buildManager.GetTurretToBuild() == null) return;
+		if (turret != null)	return;
+		
+		GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
+		
+		if (PlayerStats.Money < turretToBuild.GetComponent<Turette>().cost)
 			return;
-		}
 
+		PlayerStats.Money -= turretToBuild.GetComponent<Turette>().cost;
+		turret = (GameObject)Instantiate(turretToBuild, transform.position, Quaternion.identity);
 	}
 
 }

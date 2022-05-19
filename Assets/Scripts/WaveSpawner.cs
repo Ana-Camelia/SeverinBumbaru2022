@@ -20,7 +20,7 @@ public class WaveSpawner : MonoBehaviour
         {
             StartCoroutine(SpawnAllWaves());
             coroutineRunning = true;
-            countdownText.text = "0";
+            countdownText.text = "";
         }
         else
         {

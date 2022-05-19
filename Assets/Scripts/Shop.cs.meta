@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 991f6fd77ef5d334facda221bafc78a6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - musicTurret: {instanceID: 0}
+  - friendsTurret: {instanceID: 0}
+  - gamingTurret: {instanceID: 0}
+  - coffeeTurret: {instanceID: 0}
+  - sleepTurret: {instanceID: 0}
+  - timeMgtTurret: {instanceID: 0}
+  - sbTurret: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
