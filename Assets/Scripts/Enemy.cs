@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour
 	[SerializeField] private int waypointIndex = 0;
 	WaveConfig waveConfig;
 
+	//[SerializeField] AudioClip hitSound;
+
 	void Start()
     {
 		speed = waveConfig.GetEnemySpeed() * waveConfig.GetSpeedRandomFactor();
@@ -62,9 +64,9 @@ public class Enemy : MonoBehaviour
 
 
     public void TakeDamage(float amount)
-	{
+	{	
+		//AudioSource.PlayClipAtPoint(hitSound, Camera.main.transform.position, 0.3f);
 		health -= amount;
-
 		if (health <= 0 && !isDead)
 		{
 			Die();
@@ -73,6 +75,7 @@ public class Enemy : MonoBehaviour
 
 	void Die()
 	{
+		
 		isDead = true;
 
 		Destroy(gameObject);

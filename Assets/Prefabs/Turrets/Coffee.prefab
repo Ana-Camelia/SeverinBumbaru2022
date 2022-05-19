@@ -132,3 +132,4 @@ MonoBehaviour:
   fireRate: 1
   enemyTag: Enemy
   firePoint: {fileID: 2743511104394227083}
+  shootSound: {fileID: 8300000, guid: b7f2a541a761cb743a19c79ef309ab6c, type: 3}

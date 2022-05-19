@@ -19,9 +19,12 @@ public class Turette : MonoBehaviour
     private float fireCountdown = 0f;
 
     [Header("Unity Setup Fields")]
-
     public string enemyTag = "Enemy";
     public Transform firePoint;
+
+
+    [Header("Audios")]
+    [SerializeField] AudioClip shootSound;
 
     void Start()
     {
@@ -77,6 +80,7 @@ public class Turette : MonoBehaviour
 
     void Shoot()
     {
+        AudioSource.PlayClipAtPoint(shootSound, firePoint.position, 0.75f);
         GameObject bulletGO = (GameObject)Instantiate(
                     bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
