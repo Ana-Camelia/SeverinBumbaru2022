@@ -56,8 +56,10 @@ public class Enemy : MonoBehaviour
         {
 			//Debug.Log("Finish");
 			Die();
+			LevelManager.isGameOver = true;
 		}
     }
+
 
     public void TakeDamage(float amount)
 	{
