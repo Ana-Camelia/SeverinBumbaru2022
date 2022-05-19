@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 100
   bulletPrefab: {fileID: 7333391714127570481, guid: 5c7c77a8154062546ac047cc4c8f45d8, type: 3}
-  fireRate: 1
+  fireRate: 2
   enemyTag: Enemy
   firePoint: {fileID: 2743511104394227083}
   shootSound: {fileID: 8300000, guid: b7f2a541a761cb743a19c79ef309ab6c, type: 3}

@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   health: 50
+  score: 50
   movementRandomFactor: 0.3
   randomOffset: {x: 0, y: 0, z: 0}
   waypointIndex: 0
-  hitSound: {fileID: 8300000, guid: b3e189a98a4834d4591a6e496917e991, type: 3}

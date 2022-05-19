@@ -520,7 +520,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 927571384320859646, guid: c5324963552e2db4fa7cdc1be9dc8dcd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -594,9 +594,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1437395155838889921}
   - component: {fileID: 437282053664829648}
+  - component: {fileID: 6281368098710968928}
   m_Layer: 0
   m_Name: Thesis
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -610,7 +611,7 @@ Transform:
   m_GameObject: {fileID: 5081323135728466197}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.0325108, y: 5.4987025, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 2788538583762383055}
   - {fileID: 4181493568532829873}
@@ -643,6 +644,24 @@ MonoBehaviour:
     showGizmo: 1
   - color: {r: 0, g: 1, b: 0, a: 1}
     showGizmo: 1
+--- !u!114 &6281368098710968928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5081323135728466197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750a0d505889e8747b5f0f80d7dded56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  health: 100
+  score: 15
+  movementRandomFactor: 0.3
+  randomOffset: {x: 0, y: 0, z: 0}
+  waypointIndex: 0
 --- !u!1 &5974976243530045184
 GameObject:
   m_ObjectHideFlags: 0

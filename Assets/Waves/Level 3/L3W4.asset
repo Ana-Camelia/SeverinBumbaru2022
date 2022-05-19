@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d74d624732f75a4f9bd0d82e02a1cda, type: 3}
-  m_Name: TestWave2
+  m_Name: L3W4
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1636465152379611223, guid: b82038e94a74ac04485d345dae05729b, type: 3}
-  timeBetweenSpawns: 0.5
+  enemyPrefab: {fileID: 3067651115738258723, guid: d6e67cd85085aba4c86f399771c5fe92, type: 3}
+  timeBetweenSpawns: 0.2
   timeRandom: 5
-  enemySpeed: 2
-  speedRandomFactor: 2
+  enemySpeed: 4
+  speedRandomFactor: 1
   enemyNumber: 5

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public static int Money;
-    public int startMoney = 400;
+    public int startMoney = 50;
     private void Awake()
     {
         if (FindObjectsOfType(GetType()).Length > 1)

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3497905971042221668}
   - component: {fileID: 157950804271460600}
   m_Layer: 0
-  m_Name: Bullying
+  m_Name: Bullying 2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   health: 50
+  score: 35
   movementRandomFactor: 0.3
   randomOffset: {x: 0, y: 0, z: 0}
   waypointIndex: 0
-  hitSound: {fileID: 8300000, guid: b3e189a98a4834d4591a6e496917e991, type: 3}

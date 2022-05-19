@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 {
 	[SerializeField] private float speed;
 	[SerializeField] private float health = 50f;
-	//private int score = 50;
+	[SerializeField] private int score = 50;
 	private bool isDead = false;
 
 	private Transform target;
@@ -77,7 +77,7 @@ public class Enemy : MonoBehaviour
 	{
 		
 		isDead = true;
-
+		PlayerStats.Money += score;
 		Destroy(gameObject);
 	}
 }

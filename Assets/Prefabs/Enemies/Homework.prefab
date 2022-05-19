@@ -1429,7 +1429,7 @@ Transform:
   m_GameObject: {fileID: 8293627590940802376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.1631203, y: 2.3404255, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 576001064125243782}
   - {fileID: 134117748336783089}
@@ -1507,6 +1507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   health: 50
+  score: 10
   movementRandomFactor: 0.3
   randomOffset: {x: 0, y: 0, z: 0}
   waypointIndex: 0
