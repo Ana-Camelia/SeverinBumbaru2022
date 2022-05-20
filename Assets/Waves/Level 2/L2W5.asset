@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d74d624732f75a4f9bd0d82e02a1cda, type: 3}
   m_Name: L2W5
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1636465152379611223, guid: e59beb4dba4c37a4797bc5fa5eed797d, type: 3}
+  enemyPrefab: {fileID: 1014901130966828743, guid: 484af7369c213cb4a8bc1f6d885d94c5, type: 3}
   timeBetweenSpawns: 0.2
   timeRandom: 5
   enemySpeed: 3
