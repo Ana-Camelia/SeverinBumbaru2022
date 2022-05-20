@@ -19,6 +19,8 @@ public class Shop : MonoBehaviour
 		buildManager = BuildManager.instance;
 	}
 
+	//functii de selectare a turetei de construit
+
 	public void SelectMusicTurret()
 	{
 		buildManager.SelectTurretToBuild(musicTurret);

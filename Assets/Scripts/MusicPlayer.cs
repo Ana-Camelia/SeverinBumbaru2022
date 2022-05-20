@@ -5,7 +5,7 @@ using UnityEngine;
 public class MusicPlayer : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Awake()
+    void Awake() //singleton pentru music player
     {
         if (FindObjectsOfType(GetType()).Length > 1 )
         {
@@ -18,9 +18,4 @@ public class MusicPlayer : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

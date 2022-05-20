@@ -19,6 +19,8 @@ public class TileScript : MonoBehaviour
 		buildManager = BuildManager.instance;
 	}
 
+	//highlight pentru tile-uri
+
 	void OnMouseEnter()
 	{
 		if (buildManager.GetTurretToBuild() == null) return;
@@ -33,6 +35,7 @@ public class TileScript : MonoBehaviour
 		rend.material.color = startColor;
 	}
 
+	//lansam procedura de constructie atunci cand dam click pe un tile fara tureta
 	void OnMouseDown()
 	{
 		if (buildManager.GetTurretToBuild() == null) return;

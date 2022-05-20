@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    //stabilim cand e game over
 
     public bool isGameOver = false;
     bool audioPlayed = false;

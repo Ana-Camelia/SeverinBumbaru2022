@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     float nextLevelDelay = 3f;
 
+    //incarcam nivelele cu un delay de 3 secunde
 
     public void LoadNextLevel()
     {

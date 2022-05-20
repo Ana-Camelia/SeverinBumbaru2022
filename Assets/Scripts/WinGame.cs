@@ -5,7 +5,7 @@ using UnityEngine;
 public class WinGame : MonoBehaviour
 {
 
-    // Update is called once per frame
+    // stabilim cand se castiga nivelul
     void Update()
     {
         if (!FindObjectOfType<WaveSpawner>().spawnDone) return;

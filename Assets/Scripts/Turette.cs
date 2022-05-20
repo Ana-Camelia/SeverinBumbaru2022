@@ -10,7 +10,7 @@ public class Turette : MonoBehaviour
 
 	[Header("General")]
 
-	private float range = 2f;
+	public float range = 2f;
     public int cost = 10;
 
     [Header("Use Bullets")]
@@ -31,7 +31,7 @@ public class Turette : MonoBehaviour
         InvokeRepeating("UpdateTarget", 0f, 0.1f);
     }
 
-    void UpdateTarget()
+    void UpdateTarget() //calculam cel mai apropiat inamic in care sa tragem
 	{
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         float shortestDistance = Mathf.Infinity;
@@ -58,7 +58,7 @@ public class Turette : MonoBehaviour
 
     }
 
-    void Update()
+    void Update() //daca avem target, putem sa tragem
     {
         if (target == null) return;
         
@@ -78,7 +78,7 @@ public class Turette : MonoBehaviour
         }
     }
 
-    void Shoot()
+    void Shoot() //instantiem sunet si bullet
     {
         AudioSource.PlayClipAtPoint(shootSound, firePoint.position, 0.75f);
         GameObject bulletGO = (GameObject)Instantiate(

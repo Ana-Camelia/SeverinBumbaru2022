@@ -28,20 +28,14 @@ public class BuildManager : MonoBehaviour
 	public bool CanBuild { get { return turretToBuild != null; } }
 	public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.GetComponent<Turette>().cost; } }
 
-	public void SelectNode(TileScript node)
+	public void SelectNode(TileScript node) //nu permitem ca un tile sa aiba mai mult de o tureta pe el
 	{
 		turretToBuild = null;
 	}
 
-	//public void DeselectNode()
-	//{
-	//	selectedNode = null;
-	//}
-
-	public void SelectTurretToBuild(GameObject turret)
+	public void SelectTurretToBuild(GameObject turret) //selectam tureta de construit
 	{
 		turretToBuild = turret;
-		//DeselectNode();
 	}
 
 	public GameObject GetTurretToBuild()

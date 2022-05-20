@@ -6,7 +6,7 @@ using UnityEngine;
 public class Money : MonoBehaviour
 {
 
-    // Update is called once per frame
+    // updatam banii din player stats
     void Update()
     {
         GetComponent<TextMeshProUGUI>().SetText("$"+PlayerStats.Money.ToString());

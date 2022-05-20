@@ -6,7 +6,7 @@ public class PlayerStats : MonoBehaviour
 {
     public static int Money;
     private int startMoney = 50;
-    private void Awake()
+    private void Awake() //singleton pentru bani
     {
         if (FindObjectsOfType(GetType()).Length > 1)
         {

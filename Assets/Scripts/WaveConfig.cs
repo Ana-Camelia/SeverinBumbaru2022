@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//sablon de wave
+
 [CreateAssetMenu(menuName = "Enemy Wave")]
 public class WaveConfig : ScriptableObject
 {

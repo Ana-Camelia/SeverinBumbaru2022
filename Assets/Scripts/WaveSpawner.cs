@@ -14,7 +14,7 @@ public class WaveSpawner : MonoBehaviour
     bool coroutineRunning = false;
     [HideInInspector] public bool spawnDone = false;
 
-    void Update()
+    void Update() //countdown pana la start
     {
         if (coroutineRunning) return;
         if (countdown <= 0f)
@@ -45,7 +45,7 @@ public class WaveSpawner : MonoBehaviour
     {
         for (int enemyIndex = 0; enemyIndex < waveConfig.GetEnemyNumber(); enemyIndex++) //lansam atatia inamici cati am indicat in waveConfig
         {
-            //instantiem prefab-ul ales, la pozitia 0 din traiectorie, si il intoarcem la 180 de grade pentru a fi cu fata spre jucator
+            //instantiem prefab-ul ales, la pozitia start
             var newEnemy = Instantiate(
                 waveConfig.GetEnemyPrefab(),
                 GameObject.Find("Start").transform.position,
@@ -54,7 +54,7 @@ public class WaveSpawner : MonoBehaviour
             var enemy = newEnemy.GetComponent<Enemy>();
             enemy.SetWaveConfig(waveConfig);
             //enemyPathing = newEnemy.GetComponent<EnemyPathing>();
-            //enemyPathing.SetWaveConfig(waveConfig); //setam waveConfig-ul in codul de enemyPathing atasat fiecarui inamic
+            //enemyPathing.SetWaveConfig(waveConfig);
             //enemyPathing.SetWaypointOffset(offsetVector);
 
             yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns()); //asteptam un anumit timp pana la instantierea urmatorului inamic

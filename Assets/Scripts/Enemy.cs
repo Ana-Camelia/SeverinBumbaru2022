@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
-	[SerializeField] private float speed;
+	private float speed;
 	[SerializeField] private float health = 50f;
 	[SerializeField] private int score = 50;
 	private bool isDead = false;
@@ -21,8 +21,10 @@ public class Enemy : MonoBehaviour
 
 	void Start()
     {
+		//preluam viteza din caracteristicile wave-ului
 		speed = waveConfig.GetEnemySpeed() * waveConfig.GetSpeedRandomFactor();
 		target = Waypoints.waypoints[waypointIndex];
+		//deplasam inamicul cu o traiectorie cu factor de randomizare
 		randomOffset = new Vector3(Random.Range(-movementRandomFactor, movementRandomFactor),
 									Random.Range(-movementRandomFactor, movementRandomFactor), 0);
     }
@@ -39,7 +41,7 @@ public class Enemy : MonoBehaviour
 
 	private void Move()
     {
-        if(waypointIndex < Waypoints.waypoints.Length)
+        if(waypointIndex < Waypoints.waypoints.Length) //daca mai avem waypoint-uri de parcurs, ne deplasam catre urmatorul
         {
 			target = Waypoints.waypoints[waypointIndex];
 			var movementOnFrame = speed * Time.deltaTime;
@@ -54,7 +56,7 @@ public class Enemy : MonoBehaviour
 											Random.Range(-movementRandomFactor, movementRandomFactor), 0);
 			}
 		}
-		else
+		else //daca nu, inseamna ca am ajuns la final, ne autodistrugem si player-ul este invins
         {
 			//Debug.Log("Finish");
 			Die();
