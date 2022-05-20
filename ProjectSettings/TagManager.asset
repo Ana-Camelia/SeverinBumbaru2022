@@ -42,6 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Tufisuri
+    uniqueID: 3834510381
+    locked: 0
   - name: Bullets
     uniqueID: 2779438971
     locked: 0
