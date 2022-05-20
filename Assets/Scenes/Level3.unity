@@ -12075,6 +12075,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SelectCoffeeTurret
       objectReference: {fileID: 0}
+    - target: {fileID: 3076824598168374712, guid: 43fe7b2ac681be54198880ad59c1e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 429395150}
+    - target: {fileID: 3076824598168374712, guid: 43fe7b2ac681be54198880ad59c1e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectMusicTurret
+      objectReference: {fileID: 0}
     - target: {fileID: 3076824598168374718, guid: 43fe7b2ac681be54198880ad59c1e602, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -12129,26 +12137,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6383821970961991724, guid: 43fe7b2ac681be54198880ad59c1e602, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6383821970961991724, guid: 43fe7b2ac681be54198880ad59c1e602, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6383821970961991724, guid: 43fe7b2ac681be54198880ad59c1e602, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6383821970961991724, guid: 43fe7b2ac681be54198880ad59c1e602, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6383821970961991724, guid: 43fe7b2ac681be54198880ad59c1e602, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 495
       objectReference: {fileID: 0}
     - target: {fileID: 6383821970961991724, guid: 43fe7b2ac681be54198880ad59c1e602, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: -50.5775
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383821970961991727, guid: 43fe7b2ac681be54198880ad59c1e602, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6926257969093563947, guid: 43fe7b2ac681be54198880ad59c1e602, type: 3}
